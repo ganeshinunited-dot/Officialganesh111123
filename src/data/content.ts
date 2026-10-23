@@ -24,13 +24,7 @@ export const ABOUT_IMAGE = {
 
 /* ---------------------------------- Nav ---------------------------------- */
 
-export const NAV_LINKS = [
-  { label: 'Services', href: '#services' },
-  { label: 'Work', href: '#work' },
-  { label: 'About', href: '#about' },
-  { label: 'Articles', href: '#articles' },
-  { label: 'FAQ', href: '#faq' },
-];
+export const NAV_LINKS = [{ label: 'Articles', href: '#articles' }];
 
 /* -------------------------------- Services ------------------------------- */
 

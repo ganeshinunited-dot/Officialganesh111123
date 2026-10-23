@@ -24,7 +24,7 @@ if (!existsSync(sourcesDir)) {
   process.exit(0);
 }
 
-const partPattern = /^(.+\.jpg)\.part\d+\.b64$/;
+const partPattern = /^(.+\.(?:jpg|png))\.part\d+\.b64$/;
 
 for (const entry of readdirSync(sourcesDir, { withFileTypes: true })) {
   if (!entry.isDirectory()) continue;

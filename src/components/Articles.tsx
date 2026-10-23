@@ -6,7 +6,7 @@ export default function Articles() {
       <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28">
         {/* Editorial section header */}
         <p className="font-display text-xs uppercase tracking-[0.22em] text-terra">
-          04 — Articles
+          Articles &amp; Growth Essays
         </p>
         <div className="mt-5 border-t border-sand" aria-hidden="true" />
         <div className="mt-8 grid gap-6 lg:grid-cols-12 lg:items-end">

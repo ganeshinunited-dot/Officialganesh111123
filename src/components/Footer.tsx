@@ -1,4 +1,4 @@
-import { NAV_LINKS } from '../data/content';
+import { NAV_LINKS, CONTACT } from '../data/content';
 
 export default function Footer() {
   return (
@@ -8,9 +8,13 @@ export default function Footer() {
           Ganesh Karki<span className="text-terra">.</span>
         </p>
         <p className="mt-3 text-lg text-paper/65">Meta Ads, UI/UX &amp; Web Design</p>
-        <p className="mt-5 -rotate-1 font-hand text-2xl font-semibold text-peach">
-          handcrafted with care — Ganesh
-        </p>
+        <p className="mt-5 font-hand text-2xl font-semibold text-peach">handcrafted with care</p>
+        <img
+          src="/images/signature.png"
+          alt="Signature of Ganesh Karki"
+          className="mt-2 h-16 w-auto -rotate-2 sm:h-20"
+          loading="lazy"
+        />
 
         <div className="mt-12 border-t border-white/15" aria-hidden="true" />
 
@@ -26,10 +30,12 @@ export default function Footer() {
               </a>
             ))}
             <a
-              href="#contact"
+              href={CONTACT.whatsappUrl}
+              target="_blank"
+              rel="noreferrer"
               className="font-display text-sm text-paper/75 transition-colors hover:text-paper"
             >
-              Contact
+              WhatsApp
             </a>
           </nav>
           <p className="text-base text-paper/50">© 2026 Ganesh Karki</p>

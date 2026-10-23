@@ -10,6 +10,24 @@ import {
   Compass,
 } from 'lucide-react';
 
+/* --------------------------------- Images -------------------------------- */
+
+export const HERO_IMAGE = {
+  src: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80',
+  alt: 'Strategy team reviewing campaign plans around a table',
+};
+
+export const ABOUT_IMAGE = {
+  src: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=80',
+  alt: 'Working session at a whiteboard covered in notes and sketches',
+};
+
+export const SERVICES_IMAGE = {
+  src: 'https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1600&q=80',
+  alt: 'Hand-drawn UX wireframe sketches on paper',
+  caption: 'UX wireframe sketches — where every design engagement begins.',
+};
+
 /* ---------------------------------- Nav ---------------------------------- */
 
 export const NAV_LINKS = [
@@ -80,6 +98,8 @@ export interface Project {
   year: string;
   tagline: string;
   tags: string[];
+  image: string;
+  imageAlt: string;
 }
 
 export const PROJECTS: Project[] = [
@@ -90,6 +110,9 @@ export const PROJECTS: Project[] = [
     year: '2025',
     tagline: 'Full-funnel Meta Ads architecture & high-converting UX trial onboarding.',
     tags: ['Meta Ads', 'SaaS', 'UI/UX', 'Framer', 'CAPI'],
+    image:
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Analytics dashboard with charts on a screen',
   },
   {
     title: 'Velocity Apparel',
@@ -98,6 +121,9 @@ export const PROJECTS: Project[] = [
     year: '2024',
     tagline: 'High-performing Meta Ads creative strategy with Advantage+ Shopping Campaigns (ASC).',
     tags: ['Meta Ads', 'E-Commerce', 'Creative Strategy', 'CRO'],
+    image:
+      'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Smartphone showing social media marketing engagement',
   },
   {
     title: 'MetricX Analytics',
@@ -106,6 +132,9 @@ export const PROJECTS: Project[] = [
     year: '2025',
     tagline: '100% End-to-end UI/UX design and design system for a next-gen data pipeline platform.',
     tags: ['SaaS', 'UI/UX', 'Figma', 'Design System', 'Web Design'],
+    image:
+      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Laptop displaying growth charts and analytics',
   },
   {
     title: 'Synchro Cloud Solutions',
@@ -114,6 +143,9 @@ export const PROJECTS: Project[] = [
     year: '2024',
     tagline: 'High-ticket B2B Meta Lead Generation with qualified custom audience funnels.',
     tags: ['Meta Ads', 'Lead Gen', 'Copywriting', 'Landing Page'],
+    image:
+      'https://images.unsplash.com/photo-1533750349088-cd871a92f312?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Smartphone displaying business charts',
   },
   {
     title: 'Nordic Horizon Fintech',
@@ -122,6 +154,9 @@ export const PROJECTS: Project[] = [
     year: '2025',
     tagline: 'Bespoke web experience with precision micro-interactions and high-converting architecture.',
     tags: ['Web Design', 'UI/UX', 'Framer', 'Motion', 'Fintech'],
+    image:
+      'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Code editor open on a MacBook',
   },
   {
     title: 'Apex AI Assistant',
@@ -130,6 +165,9 @@ export const PROJECTS: Project[] = [
     year: '2025',
     tagline: 'Product launch & paid user acquisition strategy with high-CTR video hooks.',
     tags: ['Meta Ads', 'SaaS', 'Mobile App', 'Growth Marketing'],
+    image:
+      'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Team collaborating around laptops at a table',
   },
 ];
 

@@ -34,4 +34,14 @@
     background: var(--color-gold);
     color: var(--color-navy);
   }
+
+  /* Visible, on-brand keyboard focus everywhere */
+  :focus-visible {
+    outline: 2px solid var(--color-jwblue);
+    outline-offset: 3px;
+  }
+
+  img {
+    user-select: none;
+  }
 }

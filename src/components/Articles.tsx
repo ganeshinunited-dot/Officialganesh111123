@@ -1,41 +1,43 @@
-import { Calendar, Clock } from 'lucide-react';
 import { ARTICLES } from '../data/content';
 
 export default function Articles() {
   return (
-    <section id="articles" className="bg-mist">
-      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
-        <p className="text-xs font-bold uppercase tracking-[0.2em] text-jwblue sm:text-sm">
-          Articles &amp; growth essays
-        </p>
-        <h2 className="mt-3 font-display text-3xl font-bold text-navy sm:text-4xl">
-          Thoughts on growth &amp; design
-        </h2>
-        <p className="mt-3 max-w-2xl text-base leading-relaxed text-slate-text">
-          Real-world lessons from scaling digital advertising, crafting intuitive software
-          interfaces, and building lightning-fast websites.
-        </p>
+    <section id="articles" className="bg-white">
+      <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28">
+        {/* Editorial section header */}
+        <p className="text-xs font-bold uppercase tracking-[0.22em] text-gold">04 — Articles</p>
+        <div className="mt-5 border-t border-ink/10" aria-hidden="true" />
+        <div className="mt-8 grid gap-6 lg:grid-cols-12 lg:items-end">
+          <h2 className="font-display text-4xl font-bold tracking-tight text-navy sm:text-5xl lg:col-span-7">
+            Thoughts on growth &amp; design
+          </h2>
+          <p className="max-w-xl text-base leading-relaxed text-slate-text lg:col-span-5">
+            Real-world lessons from scaling digital advertising, crafting intuitive software
+            interfaces, and building lightning-fast websites.
+          </p>
+        </div>
 
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {/* Editorial index rows */}
+        <div className="mt-14 border-b border-ink/10">
           {ARTICLES.map((article) => (
             <article
               key={article.title}
-              className="flex flex-col rounded-2xl bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+              className="group grid grid-cols-1 gap-2 border-t border-ink/10 py-7 sm:grid-cols-12 sm:items-baseline sm:gap-6 sm:py-8"
             >
-              <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs font-medium text-slate-text">
-                <span className="flex items-center gap-1.5">
-                  <Calendar className="h-3.5 w-3.5 text-jwblue" />
-                  {article.date}
-                </span>
-                <span className="flex items-center gap-1.5">
-                  <Clock className="h-3.5 w-3.5 text-jwblue" />
-                  {article.readTime}
-                </span>
+              <time className="text-sm font-semibold uppercase tracking-wider text-slate-text sm:col-span-2">
+                {article.date}
+              </time>
+              <div className="sm:col-span-8">
+                <h3 className="font-display text-xl font-semibold leading-snug text-navy transition-colors duration-200 group-hover:text-jwblue sm:text-2xl">
+                  {article.title}
+                </h3>
+                <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate-text">
+                  {article.excerpt}
+                </p>
               </div>
-              <h3 className="mt-4 font-display text-base font-semibold leading-snug text-navy">
-                {article.title}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-slate-text">{article.excerpt}</p>
+              <p className="text-sm font-medium text-slate-text sm:col-span-2 sm:text-right">
+                {article.readTime}
+              </p>
             </article>
           ))}
         </div>

@@ -1,46 +1,49 @@
 import { useState } from 'react';
-import { ChevronDown } from 'lucide-react';
+import { Minus, Plus } from 'lucide-react';
 import { FAQS } from '../data/content';
 
 export default function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="bg-white">
-      <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-24">
-        <p className="text-center text-xs font-bold uppercase tracking-[0.2em] text-jwblue sm:text-sm">
-          FAQ
-        </p>
-        <h2 className="mt-3 text-center font-display text-3xl font-bold text-navy sm:text-4xl">
-          Frequently asked questions
-        </h2>
-        <p className="mx-auto mt-3 max-w-2xl text-center text-base leading-relaxed text-slate-text">
-          Everything you need to know about Meta ad campaigns, UI/UX sprints, deliverables, and
-          scaling milestones.
-        </p>
+    <section id="faq" className="bg-mist">
+      <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28">
+        {/* Editorial section header */}
+        <p className="text-xs font-bold uppercase tracking-[0.22em] text-gold">05 — FAQ</p>
+        <div className="mt-5 border-t border-ink/10" aria-hidden="true" />
+        <div className="mt-8 grid gap-6 lg:grid-cols-12 lg:items-end">
+          <h2 className="font-display text-4xl font-bold tracking-tight text-navy sm:text-5xl lg:col-span-7">
+            Frequently asked questions
+          </h2>
+          <p className="max-w-xl text-base leading-relaxed text-slate-text lg:col-span-5">
+            Everything you need to know about Meta ad campaigns, UI/UX sprints, deliverables, and
+            scaling milestones.
+          </p>
+        </div>
 
-        <div className="mt-10 space-y-4">
+        {/* Editorial accordion */}
+        <div className="mt-14 max-w-4xl border-b border-ink/10">
           {FAQS.map((faq, index) => {
             const isOpen = openIndex === index;
             return (
-              <div key={faq.question} className="rounded-2xl bg-mist">
+              <div key={faq.question} className="border-t border-ink/10">
                 <button
                   type="button"
                   onClick={() => setOpenIndex(isOpen ? null : index)}
-                  className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left sm:px-6 sm:py-5"
+                  className="flex w-full items-center justify-between gap-6 py-6 text-left sm:py-7"
                   aria-expanded={isOpen}
                 >
-                  <span className="font-display text-base font-semibold text-navy">
+                  <span className="font-display text-lg font-semibold leading-snug text-navy sm:text-xl">
                     {faq.question}
                   </span>
-                  <ChevronDown
-                    className={`h-5 w-5 shrink-0 text-jwblue transition-transform ${
-                      isOpen ? 'rotate-180' : ''
-                    }`}
-                  />
+                  {isOpen ? (
+                    <Minus className="h-5 w-5 shrink-0 text-jwblue" aria-hidden="true" />
+                  ) : (
+                    <Plus className="h-5 w-5 shrink-0 text-jwblue" aria-hidden="true" />
+                  )}
                 </button>
                 {isOpen && (
-                  <p className="px-5 pb-5 text-sm leading-relaxed text-slate-text sm:px-6 sm:text-base">
+                  <p className="max-w-3xl pb-7 text-base leading-relaxed text-slate-text">
                     {faq.answer}
                   </p>
                 )}

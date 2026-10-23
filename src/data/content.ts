@@ -203,6 +203,13 @@ export interface Article {
 
 export const ARTICLES: Article[] = [
   {
+    date: 'Oct 23, 2026',
+    readTime: '6 min read',
+    title: 'After AdSense Approval: The PIN, Tax Form and Payout Steps Nobody Mentions',
+    excerpt:
+      'Approval is only the halfway mark. The tax form, the PIN card that arrives by ordinary post, and the payout threshold still standing between you and your first payment — plus the two page fixes to make before you apply.',
+  },
+  {
     date: 'Sep 18, 2026',
     readTime: '6 min read',
     title: 'How to Scale Meta Ads to $50K a Month Without Burning Capital',

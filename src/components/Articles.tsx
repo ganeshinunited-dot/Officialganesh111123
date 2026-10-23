@@ -36,6 +36,11 @@ export default function Articles() {
                 <h3 className="font-display text-xl leading-snug text-ink transition-colors duration-200 group-hover:text-terra sm:text-2xl">
                   {article.title}
                 </h3>
+                {article.author && (
+                  <p className="mt-1.5 font-display text-sm uppercase tracking-wider text-terra">
+                    By {article.author}
+                  </p>
+                )}
                 <p className="mt-2 max-w-2xl leading-relaxed text-cocoa">{article.excerpt}</p>
               </div>
               <p className="font-display text-sm text-cocoa sm:col-span-2 sm:text-right">

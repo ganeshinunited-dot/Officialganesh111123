@@ -199,6 +199,7 @@ export interface Article {
   readTime: string;
   title: string;
   excerpt: string;
+  author?: string;
 }
 
 export const ARTICLES: Article[] = [
@@ -206,6 +207,7 @@ export const ARTICLES: Article[] = [
     date: 'Oct 23, 2026',
     readTime: '6 min read',
     title: 'After AdSense Approval: The PIN, Tax Form and Payout Steps Nobody Mentions',
+    author: 'Ganesh Karki',
     excerpt:
       'Approval is only the halfway mark. The tax form, the PIN card that arrives by ordinary post, and the payout threshold still standing between you and your first payment — plus the two page fixes to make before you apply.',
   },

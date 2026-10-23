@@ -13,19 +13,13 @@ import {
 /* --------------------------------- Images -------------------------------- */
 
 export const HERO_IMAGE = {
-  src: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80',
-  alt: 'Strategy team reviewing campaign plans around a table',
+  src: '/images/hero.jpg',
+  alt: "Watercolour illustration of a designer's desk with a laptop and wireframe sketchbook, overlooking terraced hills and a village",
 };
 
 export const ABOUT_IMAGE = {
-  src: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=80',
-  alt: 'Working session at a whiteboard covered in notes and sketches',
-};
-
-export const SERVICES_IMAGE = {
-  src: 'https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1600&q=80',
-  alt: 'Hand-drawn UX wireframe sketches on paper',
-  caption: 'UX wireframe sketches — where every design engagement begins.',
+  src: '/images/about.jpg',
+  alt: 'Watercolour illustration of Ganesh sketching app wireframes at his desk, hills and village rooftops beyond the window',
 };
 
 /* ---------------------------------- Nav ---------------------------------- */
